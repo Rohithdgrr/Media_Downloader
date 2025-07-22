@@ -1,0 +1,41 @@
+Media_Downloader Usage Guide
+Overview
+This tool allows you to download YouTube videos in various resolutions (up to 8K) or extract audio as MP3 using the yt-dlp library. FFmpeg is required for merging video/audio and MP3 conversion.
+
+Setup
+Ensure Python 3.8+ is installed.
+Install FFmpeg:
+Windows: Download from FFmpeg website and add to PATH
+macOS: brew install ffmpeg
+Linux: sudo apt-get install ffmpeg (Ubuntu/Debian) or equivalent
+
+Install dependencies:pip install -r requirements.txt
+
+Running the Tool
+Navigate to the project directory:cd youtube_downloader
+
+Run the script:python src/downloader.py
+
+
+
+User Input
+YouTube URL: Enter the full URL of the YouTube video (e.g., https://www.youtube.com/watch?v=VIDEO_ID).
+Menu Options:
+1: Lists all available video and audio formats for the provided URL.
+2: Downloads the video in up to 8K (4320p) resolution.
+3: Downloads the video in up to 4K (2160p) resolution.
+4: Downloads the video in up to 1080p resolution.
+5: Downloads the video in up to 720p resolution.
+6: Downloads the video in up to 480p resolution.
+7: Downloads the audio as an MP3 file with the best quality.
+
+
+
+Output
+Downloaded files are saved in the current directory with the video title as the filename.
+Videos are saved as .mp4 files, and audio is saved as .mp3 files.
+
+Troubleshooting
+FFmpeg Error: Ensure FFmpeg is installed and added to your system PATH.
+Invalid URL: Verify the YouTube URL is correct and accessible.
+Network Issues: Check your internet connection if downloads fail.
